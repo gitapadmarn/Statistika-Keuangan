@@ -1,0 +1,14 @@
+nilaiakumulasi<- function(num,k,i,t,m=TRUE){
+  switch(num,
+  satu={At=k*(1+i*t)},
+  dua={At=k*(1+i/m)^(m*t)},
+  tiga= {At=k*exp(i*t)})
+return(At)}
+#num = pilihan 
+#(1:bunga tunggal 
+#2: bunga majemuk biasa/nominal
+#3:bunga majemuk kontinu)
+#k=modal
+#i=bunga(desimal)
+#t=waktu
+#m=berapa kali bunga diberikan dalam 1 thn
