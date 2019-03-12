@@ -1,0 +1,19 @@
+presentvalue<-function(num,At,i,t,m=TRUE){
+  switch(num,
+         satu={pv=At/(1+i*t)
+         cat("Nilai pv bunga tunggal:",pv)},
+         dua={pv=At/(1+i/m)^(m*t)
+         cat("Nilai pv bunga majemuk nominal:",pv)},
+         tiga={pv=At*exp(-i*t)
+         cat("Nilai pv bunga majemuk kontinu:",pv)}
+         )
+}
+#num = pilihan 
+#(1:bunga tunggal 
+#2: bunga majemuk biasa/nominal
+#3:bunga majemuk kontinu)
+#pv=present value
+#At=nilai akumulasi
+#i=bunga(desimal)
+#t=waktu
+#m=berapa kali bunga diberikan dalam 1 thn
